@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P6EF_APP_RebecaR.Views.PreguntaPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="welcomefondo">
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="20">
+
+            
+            <Label Text="Insertar Pregunta"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+
+            
+            <Entry x:Name="TxtAsk"
+                   Placeholder="Título de la pregunta"
+                   FontSize="20"
+                   Margin="0,0,0,10"/>
+
+           
+            <Editor x:Name="TxtAskDetail"
+                    Placeholder="Detalles de la pregunta"
+                    HeightRequest="150"
+                    FontSize="18"
+                    Margin="0,0,0,10"/>
+
+           
+            <Entry x:Name="TxtImageURL"
+                   Placeholder="URL de la imagen (opcional)"
+                   FontSize="20"
+                   Margin="0,0,0,10"/>
+
+            
+            <Picker x:Name="PickerUser"
+                    Title="Seleccionar Usuario"
+                    SelectedIndexChanged ="PickerUser_SelectedIndexChanged">
+              
+            </Picker>
+
+            
+            <Picker x:Name="PickerAskStatus"
+                    Title="Seleccionar Estado"
+                    SelectedIndexChanged ="PickerAskStatus_SelectedIndexChanged">
+               
+            </Picker>
+
+            
+            <DatePicker x:Name="DatePickerQuestionDate"
+                        Date="{Binding Source={x:Reference DatePickerQuestionDate}, Path=Date}"
+                        Format="D"
+                        FontSize="18"
+                        Margin="0,0,0,10"/>
+
+       
+            <Switch x:Name="SwIsStrike"
+                    IsToggled="False"/>
+
+            
+            <Button Text="Guardar Pregunta"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    FontSize="20"
+                    Clicked="Button_Clicked"/>
+
+           
+            <Label x:Name="LblMessage"
+                   Text=""
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

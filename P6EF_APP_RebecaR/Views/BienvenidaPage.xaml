@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P6EF_APP_RebecaR.Views.BienvenidaPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="welcomefondo">
+    <VerticalStackLayout Padding="20,50,20,0" VerticalOptions="StartAndExpand">
+
+        <Image x:Name="imgicon" Source="welcomeicon" HeightRequest="300"/>
+
+        <Entry x:Name="TxtUserName" Placeholder="Nombre de Usuario" />
+        <Entry x:Name="TxtUserPassword" Placeholder="Contraseña" IsPassword="True" />
+        <Switch x:Name="SwShowPassword" IsToggled="False" Toggled="SwShowPassword_Toggled"/>
+
+        <Button x:Name ="Button" Text="Ingresar" Clicked="Button_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
